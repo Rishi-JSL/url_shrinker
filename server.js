@@ -5,7 +5,7 @@ const mongoConnect = require('./util/database').mongoConnect
 const shortId = require('shortid')
 const ShrinkUrl = require('./model/shortUrl')
 
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 8000;
 const app = express()
 
 app.set('view engine', 'ejs')
