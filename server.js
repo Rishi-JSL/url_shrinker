@@ -5,6 +5,7 @@ const mongoConnect = require('./util/database').mongoConnect
 const shortId = require('shortid')
 const ShrinkUrl = require('./model/shortUrl')
 
+const port = process.env.PORT || 2000;
 const app = express()
 
 app.set('view engine', 'ejs')
@@ -40,7 +41,7 @@ app.get("/delete/:linkId", (req, res, next) => {
 mongoose.connect('mongodb+srv://rishi_jaiswal:JRKUedOjlraCBMlA@cluster0.8lnnm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then( result => {
     console.log("connected")
-    app.listen(2000);
+    app.listen(port);
   })
   .catch(err => {
     console.log(err)
